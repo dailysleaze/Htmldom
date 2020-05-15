@@ -1,15 +1,9 @@
 <?php namespace Yangqi\Htmldom;
 
+use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
-class HtmldomServiceProvider extends ServiceProvider {
-
-	/**
-	 * Indicates if loading of the provider is deferred.
-	 *
-	 * @var bool
-	 */
-	protected $defer = true;
+class HtmldomServiceProvider extends ServiceProvider implements DeferrableProvider {
 
 	/**
 	 * Bootstrap the application events.
@@ -18,7 +12,7 @@ class HtmldomServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('yangqi/htmldom');
+		//
 	}
 
 	/**
@@ -41,7 +35,7 @@ class HtmldomServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return ['yangqi/htmldom'];
 	}
 
 }
