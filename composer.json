@@ -18,5 +18,15 @@
             "Yangqi\\Htmldom": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yangqi\\Htmldom\\HtmldomServiceProvider"
+            ],
+            "aliases": {
+                "HtmlDOM": "Yangqi\\Htmldom\\Htmldom"
+            }
+        }
+    },
 }
